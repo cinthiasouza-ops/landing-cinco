@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-raleway);
+
+  --color-primary:    #052EB1;
+  --color-cta:        #305BE5;
+  --color-accent:     #165B83;
+  --color-bg-light:   #F2F5FD;
+  --color-blue-light: #E6ECFF;
+  --color-divider:    #BACEDA;
+
+  --color-cinza-01: #33303E;
+  --color-cinza-02: #4E4B59;
+  --color-cinza-03: #5F5C6B;
+  --color-cinza-09: #F1F0F5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #33303E;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Gradients */
+.bg-hero-gradient {
+  background: linear-gradient(133deg, rgba(5, 46, 177, 1) 0%, rgba(6, 53, 202, 1) 100%);
+}
+.bg-plans-gradient {
+  background: linear-gradient(-77deg, rgba(2, 62, 254, 1) 0%, rgba(5, 46, 177, 1) 54%);
+}
+.bg-b2c-gradient {
+  background: linear-gradient(133deg, rgba(1, 13, 50, 1) 0%, rgba(3, 34, 144, 0.5) 100%);
+}
+
+/* Hero text shadow */
+.text-shadow-hero {
+  text-shadow: 0px 4px 6px 2px rgba(5, 22, 112, 0.25);
+}
+
+/* Card shadow (Figma: Cards) */
+.shadow-card {
+  box-shadow: 0px 4px 39px 0px rgba(0, 45, 181, 0.08);
+}
+
+/* Scrollbar hide for horizontal scroll on mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Accordion transition */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
 }
